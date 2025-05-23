@@ -1,0 +1,1369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<style>
+    .BlueBg{
+        background: #28293e;
+
+    }
+    header{
+    height: 60px;
+   
+}
+#header.header-scrolled {
+    background: #33325b;
+    border-bottom: 2px solid #ef6d58;
+}
+    .nav-menu, .nav-menu * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.nav-menu > ul > li {
+    position: relative;
+    white-space: nowrap;
+    float: left;
+}
+    .nav-menu a {
+    color: white;
+    margin-left: 5px;
+    font-size: 17px;
+    font-weight: 500;
+}
+.nav-menu a:hover {
+    color: #ffa596 ;}
+.Contact{
+    border: 1px solid #afb3b7;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 12px 32px;
+    border-radius: 5px;
+    line-height: 1;
+    color: white;
+}
+.Contact:hover {
+    background: linear-gradient(to bottom, #b75840, #ef6d58);
+    color: #fff !important;
+    text-decoration: none;
+}
+.Contact span:after {
+  content: '\00bb';
+  opacity: 0;
+  top: 0;
+  
+  transition: 0.5s;
+}
+
+.Contact:hover span {
+  padding-right: 5px;
+}
+
+.Contact:hover span:after {
+  opacity: 1;
+  right: 0;margin-left: 13px;
+}
+.Info {
+    color: #808183d4 !important;
+    font-weight: 500;
+}
+.star{
+       position: absolute;
+    margin-left: 182px;
+    height: 101px;}
+.ButtonEffect span:after {
+  content: '\00bb';
+  opacity: 0;
+  top: 0;
+  
+  transition: 0.5s;
+}
+
+.ButtonEffect:hover span {
+  padding-right: 5px;
+}
+
+.ButtonEffect:hover span:after {
+  opacity: 1;
+  right: 0;margin-left: 13px;
+}
+.lightCream{
+    background-color: #FDF0E9;
+}
+.portfolio-item .portfolio-img {
+    overflow: hidden;
+    box-shadow: 0 1px 0px 0 rgb(145 150 150 / 70%), 0 0px 6px 0 rgb(16 16 16 / 52%);
+    background: linear-gradient(to bottom, #f4f9fd, #e9f4fc, #b7d3e9, #629bef);
+    height: 364px;    border-radius: 6px;
+}
+.portfolio-item .portfolio-img img {
+    transition: all 0.8s ease-in-out;
+    opacity: 1;
+    height: 364px;
+    width: 100%;
+}
+.portfolio-item:hover .portfolio-img {
+    background: linear-gradient(180deg, #fff 0%, #010001 100%) !important;
+}
+.portfolio-item:hover .portfolio-img img {
+    transform: scale(1.2);
+    opacity: 0.5;
+}
+.portfolio-item .portfolio-info {
+position: absolute;
+    bottom: 20px;
+    z-index: 3;
+    text-align: center;
+    transition: all ease-in-out 0.3s;
+    padding: 10px 15px;
+    text-align: left;
+}
+.portfolio-item .portfolio-info p {
+    color: white;
+    font-size: 29px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+#resource-slider {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+    height: 20em;
+  margin: auto;
+  overflow: hidden;
+}
+
+#resource-slider .arrow {
+    cursor: pointer;
+    position: absolute;
+    width: 28px;
+    height: 9%;
+    padding: 0;
+    margin: 0;
+    top: 153px;
+    border-radius: 50%;
+    outline: 0;
+    background: #e7e8ff80;
+}
+
+#resource-slider .arrow:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+#resource-slider .arrow:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 0.75em;
+  height: 0.75em;
+  margin: auto;
+  border-style: solid;
+}
+.resource {
+    text-align: center;
+}
+#resource-slider .prev {
+  left: 0;
+  bottom: 0;
+}
+
+#resource-slider .prev:before {
+  left: 0.25em;
+  border-width: 3px 0 0 3px;
+  border-color: #333 transparent transparent #333;
+  transform: rotate(-45deg);
+}
+
+#resource-slider .next {
+  right: 0;
+  bottom: 0;
+}
+.resource img {
+    width: 90%;
+    height: 241px;
+}
+#resource-slider .next:before {
+  right: 0.25em;
+  border-width: 3px 3px 0 0;
+  border-color: #333 #333 transparent transparent;
+  transform: rotate(45deg);
+}
+
+#resource-slider .resource-slider-frame {
+  position: absolute;
+  top: 0;
+  left: 2em;
+  right: 2em;
+  bottom: 0;
+  border-left: 0.25em solid transparent;
+  border-right: 0.25em solid transparent;
+  overflow: hidden;
+}
+
+#resource-slider .resource-slider-item {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 25%;
+  height: 100%;
+}
+
+#resource-slider .resource-slider-inset {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    border: 1px solid #3a3c56;
+    bottom: 0;
+    border-radius: 4px;
+    margin: 0.5em 0.25em;
+    overflow: hidden;padding: 4px;
+}
+#accordion [data-toggle="collapse"]:after {
+display: inline-block;
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  content: "\f054";
+  transform: rotate(90deg) ;
+  transition: all linear 0.25s;
+  float: right;background-color: #e38070;
+    width: 30px;
+    text-align: center;
+    font-size: 22px;
+    padding: 4px 9px;
+    height: 30px;
+    border-radius: 50%;color:#fff;
+  }   
+  #accordion a:hover {
+    text-decoration: none;
+}
+#accordion [data-toggle="collapse"].collapsed:after {
+  transform: rotate(0deg) ;
+}
+.dropbtn {
+    color: #495057;
+    text-align: left;
+    width: 100%;
+    font-size: 16px;
+    height: calc(1.5em + .75rem + 2px);
+    font-size: 1rem;
+    font-weight: 400;
+    cursor: pointer;
+    border: 1px solid #ced4da;
+    background-color: white;
+    border-radius: .25rem;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+@media ( max-width: 60em ) {
+  #resource-slider .resource-slider-item {
+    width: 33.33%;
+  }
+  #resource-slider {
+    height: 16em;
+  }
+}
+
+@media ( max-width: 45em ) {
+  #resource-slider .resource-slider-item {
+    width: 50%;
+  }
+}
+
+@media ( max-width: 30em ) {
+  #resource-slider .resource-slider-item {
+    width: 100%;
+  }
+  #resource-slider {
+    height: 19em;
+  }
+}
+.Map{
+   transition: transform .2s;
+}
+.Map:hover {
+  transform: scale(1.5); 
+}
+.animate {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.one {
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+.two {
+  -webkit-animation-delay: 1.5s;
+  -moz-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+}
+.three {
+  -webkit-animation-delay: 2.5s;
+  -moz-animation-delay: 2.5s;
+  animation-delay: 2.5s;
+}
+
+.four {
+  -webkit-animation-delay: 3.5s;
+  -moz-animation-delay: 3.5s;
+  animation-delay: 3.5s;
+}
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+/*=== FADE IN DOWN ===*/
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+/*=== FADE IN LEFT ===*/
+@-webkit-keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+}
+
+/*==== FADE IN RIGHT ===*/
+@-webkit-keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInRight {
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight;
+}
+.MobileView{display: none;}
+.DesktopView{display: block;}
+/*==== Responsive code ===*/
+@media(max-width:786px) {
+  .carouserimg{
+        padding-top: .5rem !important;padding-bottom: .5rem !important;
+  }
+.navbar-collapse.collapse.show {
+    background-color: #242538;
+}
+.navbar-collapse.collapse.show .nav-menu > ul > li {
+    padding: 10px;
+}
+.MobileView{display: block !important;}
+.DesktopView{display: none !important;}
+.centermobile{
+  text-align: center;
+}
+.listService{
+  line-height:inherit !important;        
+  padding-top: 37px;
+  font-size: 32px !important;
+}
+.WeofferHgt{
+  height: auto !important;
+    margin-top: 44px ! IMPORTANT;        padding: 0px 9px ! IMPORTANT;
+}
+.GrilRes{
+      top: -53px !important;
+}
+.CopyRIghtRow{
+  width:100%;text-align: center;
+}
+.pdtp{
+  padding-top:10px;
+}
+.resource img {
+    height: 219px;
+}
+}
+@media (max-width: 980px) {
+    .navbar-expand-md .navbar-toggler {
+        display: block !important;
+    }
+}
+</style>
+<script>
+     $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            $('#header').addClass('header-scrolled');
+        } else {
+            $('#header').removeClass('header-scrolled');
+        }
+    });
+
+    if ($(window).scrollTop() > 100) {
+        $('#header').addClass('header-scrolled');
+    }
+</script>
+</head>
+<body>
+
+    <!---Header Section-->
+    <div class="BlueBg">
+    <header>
+
+        <nav id="header" class="navbar navbar-expand-md navbar-dark fixed-top d-flex align-items-center px-2">
+           
+            <div class="container d-flex align-items-center p-0" style="    justify-content: initial;">
+
+                <div class="logo col-lg-3 col-7">
+                            <img src="../Image/logo1.png">
+                </div>
+
+                <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false">
+                    <span class="fa fa-ellipsis-v fa-w--6 btn-icon-wrapper "></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <nav class="col-auto col-lg-9 col-md-auto col-sm-auto d-lg-block nav-menu">
+
+                        <ul>
+                           
+                            <li class="col-lg-3"><a href="#AgencyAbout">About</a></li>
+                             <li class="col-lg-3"><a href="#AgencyServices" >Services</a></li>
+                            <li class="col-lg-3"><a href="#AgencyPricing" >Pricing</a></li>
+                            <li class="col-lg-3"><a href="#AgencyBlog" >Blog</a></li>
+                          
+                        </ul>
+                    </nav><!-- .nav-menu -->
+                    
+                    <a class="Contact ml-auto px-3"><span>CONTACT</span></a>
+                    
+
+                   
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <!---Header Section-->
+<!---Slide Section-->
+<div class="container mt-5">
+    <div class="mx-0 row DesktopView d-flex">
+<div class="col-lg-6">
+    <div style="color: #ef6d58;" class="pt-3">MODERN STUDIO</div>
+    <img src="../Image/Star.png" class="star">
+    <h1 class="pt-3 text-white" style="    font-size: 47px;
+    font-weight: bolder;">We're Help<br>
+        To Build Your<br>
+        Dream Project
+    </h1>
+   
+    <div class="Info pb-4 pt-1">
+        Agency provides a full service range including technical skills, design, business understanding.
+    </div>
+    <button class="Contact ButtonEffect px-3 mb-4" style="
+    background: linear-gradient(to bottom, #b75840, #ef6d58);
+"><span>How We Work</span></button>
+  <a  class="ml-auto px-3 text-white">Contact Us</a>
+  <div class="mx-0 pt-5 row pb-5">
+    <img src="../Image/Bitmap.png">
+    <div class="pl-2">
+    <div class="Info ">"Put themselves in the merchant's shoes"</div>
+    <div class="text-white">Meta Inc.</div>
+</div>
+</div>
+</div>
+<div class="col-lg-6 text-center ">
+    <img src="../Image/pic.png" height="450" class="px-3 w-100">
+</div>
+
+
+</div>
+<div class="mx-0 row MobileView">
+
+<div class="col-lg-6 text-center ">
+    <img src="../Image/pic.png" height="450" class="px-3 w-100">
+</div>
+<div class="col-lg-6">
+    <div style="color: #ef6d58;" class="pt-3">MODERN STUDIO</div>
+    <img src="../Image/Star.png" class="star">
+    <h1 class="pt-3 text-white" style="    font-size: 47px;
+    font-weight: bolder;">We're Help<br>
+        To Build Your<br>
+        Dream Project
+    </h1>
+   
+    <div class="Info pb-4 pt-1">
+        Agency provides a full service range including technical skills, design, business understanding.
+    </div>
+    <button class="Contact ButtonEffect px-3 mb-4" style="
+    background: linear-gradient(to bottom, #b75840, #ef6d58);
+"><span>How We Work</span></button>
+  <a  class="ml-auto px-3 text-white">Contact Us</a>
+  <div class="mx-0 pt-5 row pb-5 flex-nowrap">
+    <img src="../Image/Bitmap.png" style="width: 48px; height:48px;">
+    <span class="pl-2 ">
+    <div class="Info ">"Put themselves in the merchant's shoes"</div>
+    <div class="text-white">Meta Inc.</div>
+    </span>
+</div>
+</div>
+
+</div>
+</div>
+<!---Slide Section-->
+</div>
+<!---About Section-->
+<div class="float-left lightCream m-auto w-100" id="AgencyAbout" >
+    <div class="container">
+     
+        <div class="row mx-0 py-5 animate fadeInUp one">
+          <div class="col"><img src="../Image/logoBG.png" class="text-center carouserimg"></div>
+           <div class="col"><img src="../Image/logoBG1.png" class="text-center carouserimg"></div>
+            <div class="col"><img src="../Image/logoBG2.png" class="text-center carouserimg"></div>
+             <div class="col"><img src="../Image/logoBG2.png" class="text-center carouserimg"></div>
+              <div class="col centermobile"><img src="../Image/logoBG4.png" class="text-center carouserimg"></div>
+        </div>
+        <hr>
+        <div class="row mx-0 pt-5 animate fadeInLeft three"> 
+        <div class="col-lg-6">
+            <img src="../Image/pic (1).png" style="width:90%;">
+        </div>
+        <div class="col-lg-6 animate fadeInRight four">
+            <h5 style="color: #f28673;" class="pt-5">ABOUT</h3>
+            <h1 style="font-size: 44px; color: #391400;font-weight: bolder;"> An Experience<br>
+                Design Agency
+            </h1>
+            <h5 style="color: #391400;" class="font-weight-normal pt-3">Provides a full service range</h1>
+            <div class="Info pb-4 pt-1">
+                Ability to put themselves in the merchant's shoes. It is meant to partner on the long run, and work as an extention of the merchant;s team.
+            </div>
+            <a  class="Contact ml-auto px-3 bg-white" style="color: #391400;"><span>ABOUT US</span></a>
+        </div>
+
+       
+
+    </div>
+    <div class="border mx-0 my-5 rounded row animate fadeInUp one">
+        <div class="col-lg-4 py-3 text-center">
+            <h1 style="color: #391400;font-weight: bolder;">42%</h1>
+            <h5 style="color: #391400;" class="font-weight-normal pt-2">Years of experience</h5>
+
+        </div>
+        <div class="col-lg-4 border-left py-3 text-center">
+            <h1 style="color: #391400;font-weight: bolder;">73+</h1>
+            <h5 style="color: #391400;" class="font-weight-normal pt-2">Agency members</h5>
+        </div>
+        <div class="col-lg-4 border-left py-3 text-center">
+            <h1 style="color: #391400;font-weight: bolder;">5.000</h1>  
+
+            <h5 style="color: #391400;" class="font-weight-normal pt-2">Projects complete</h5>
+        </div>
+    </div>
+    <div class="row mx-0 pt-5" id="AgencyServices"> 
+        
+        <div class="col-lg-6 animate fadeInLeft three">
+            <h5 style="color: #f28673;">HOW WE WORK</h3>
+            <h1 style="font-size: 44px; color: #391400; font-weight:bolder;" class="pt-2">Making Your Projects<br>
+                Look Awesome
+            </h1>
+           
+            <div class="Info pb-4 pt-1">
+                Technical skills, design, business understanding, ability to put themselves in the mechant's shoes.
+            </div>
+            <a  class="Contact ml-auto px-3" style="color: #391400;"><span>Read More</span></a>
+        </div>
+        <div class="col-lg-6 animate fadeInRight four">
+            <ol style="color: #391400;
+            line-height: 2.7;
+            font-size: 28px;" class="font-weight-bolder listService">
+                <li>Full service range including</li>
+                <li>Technical skills, design, business</li>
+                <li>Themselves in the merchant's</li>
+              </ol>
+        </div>
+       
+
+    </div>
+    <hr class="my-5">
+    <div class="row mx-0 pt-5 mb-5"> 
+        <div class="col-lg-6 animate fadeInLeft three">
+         <div class="align-content-center float-left h-100 position-absolute text-center" style="
+    z-index: 9;
+    width: 90%;
+"><img src="../Image/play.png" style="
+    z-index: 9;
+    margin: auto;
+    top: 7px;
+" class="Map">
+
+</div>
+<div class="align-content-end float-left h-100 ml-2 position-absolute" style="
+    z-index: 9;
+    width: 90%;
+">
+<img src="../Image/time.png" style="
+    z-index: 9;
+" class="">
+</div>
+            <img src="../Image/Bitmap (1).png" class="w-100">
+        </div>
+        <div class="col-lg-6 align-content-center animate fadeInRight four">
+            <h5 style="color: #f28673;" class="pt-2">VIDEO REEL</h3>
+            <h1 style="font-size: 44px; color: #391400;">Unlock The Greatest<br>
+                Value Possible
+            </h1>
+            <div class="Info pb-4 pt-1">
+                Design, business understanding, ability to put themselves in the merchant's shoes meant to partner.
+            </div>
+           
+        </div>
+
+       
+
+    </div>
+    </div>
+   
+</div>
+<!---About Section-->
+<!---Portfolio Section-->
+<div class="BlueBg float-left pt-5 w-100" id="AgencyBlog">
+    <div style="color: #ef6d58;" class="pt-2 text-center">PORTFOLIO</div>
+<h1 class="text-center text-white">Latest Work</h1>
+<nav class="nav-menu DesktopView">
+
+    <ul class="text-center py-4">
+        <li style="display: contents;"><a  class="text-white">Show All <span class="bg-secondary text-white ml-1 rounded-circle" style="
+            padding: 2px 5px !IMPORTANT;
+            font-size: small;
+        ">14</span></a></li>
+        <li style="display: contents;"><a  class="text-muted">Design<span class="bg-secondary text-white ml-1 rounded-circle" style="
+            padding: 2px 5px !IMPORTANT;
+            font-size: small;
+        ">06</span></a></li>
+        <li style="display: contents;"><a   class="text-muted">Branding<span class="bg-secondary text-white ml-1 rounded-circle" style="
+            padding: 2px 5px !IMPORTANT;
+            font-size: small;
+        ">04</span></a></li>
+        <li style="display: contents;"><a  class="text-muted">Illustration<span class="bg-secondary text-white ml-1 rounded-circle" style="
+            padding: 2px 5px !IMPORTANT;
+            font-size: small;
+        ">03</span></a></li>
+        <li style="display: contents;"><a  class="text-muted">Motion<span class="bg-secondary text-white ml-1 rounded-circle" style="
+            padding: 2px 5px !IMPORTANT;
+            font-size: small;
+        ">01</span></a></li>
+    </ul>
+</nav>
+<div class="MobileView dropdown pt-2 px-5 w-100">
+  <button class="dropbtn">Show All  <i class="fa fa-caret-down float-right mr-3 mt-1"></i></button>
+  <div class="dropdown-content">
+  <a href="#">Design</a>
+  <a href="#">Branding</a>
+  <a href="#">Illustration</a>
+   <a href="#">Motion</a>
+  </div>
+</div>
+
+<div class="container">
+<div class="row mx-0 mt-4">
+    <div class="col-lg-4 col-md-6 portfolio-item filter-app animate fadeInLeft three mb-4">
+        <div class="portfolio-img"><img src="../Image/Bitmap (2).png" class="img-fluid" alt=""></div>
+        <div class="portfolio-info">
+           
+            <a  target="_blank" class="bg-white mt-4 px-3 py-1 rounded-pill text-dark">Design</a>
+            <p class="pt-1">SOFA</p>
+           
+            
+        </div>
+    </div>
+    <div class="col-lg-8 col-md-6 portfolio-item filter-app animate fadeInRight four mb-4">
+        <div class="portfolio-img"><img src="../Image/Bitmap (3).png" class="img-fluid" alt=""></div>
+        <div class="portfolio-info">
+           
+            <a  target="_blank" class="bg-white mt-4 px-3 py-1 rounded-pill text-dark">Branding</a>
+            <p class="pt-1">KeyBoard</p>
+           
+            
+        </div>
+    </div>
+</div>
+<div class="row mx-0">
+    <div class="col-lg-8 col-md-6 portfolio-item filter-app animate fadeInLeft three mb-4">
+        <div class="portfolio-img"><img src="../Image/Bitmap (4).png" class="img-fluid" alt=""></div>
+        <div class="portfolio-info">
+           
+            <a  target="_blank" class="bg-white mt-4 px-3 py-1 rounded-pill text-dark">Illustration</a>
+            <p class="pt-1">Work Media</p>
+           
+            
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-6 portfolio-item filter-app animate fadeInRight four">
+        <div class="portfolio-img"><img src="../Image/Bitmap (5).png" class="img-fluid" alt=""></div>
+        <div class="portfolio-info">
+           
+            <a  target="_blank" class="bg-white mt-4 px-3 py-1 rounded-pill text-dark">Motion</a>
+            <p class="pt-1">DDDone</p>
+           
+            
+        </div>
+    </div>
+</div>
+<div class="py-5 text-center w-100 ">
+    <a  class="Contact ml-auto px-3"><span>EXPLORE MORE</span></a> 
+</div>
+<div class="container lightCream mt-4 mb-3 mb-5 mx-0 px-5 row WeofferHgt" style="
+    height: 329px;
+">
+    <img src="../Image/icon.png" style="
+position: absolute;
+margin-top: -69px;
+height: 116px;
+">
+
+<div class="col-lg-4 mt-5" style="
+position: relative;
+">
+    <h5 style="color: #f28673;" class="pt-3">GET STARTED</h5>
+    <h2 style="color: #391400;" class="py-2"> We Help Companies<br>
+        Move Faster
+    </h1>
+    <button class="Contact ButtonEffect px-3 mb-4" style="
+    background: linear-gradient(to bottom, #b75840, #ef6d58);
+"><span>CONTACT US</span></button>
+   
+</div>
+<div class="col-lg-4 mt-5">
+    <img src="../Image/block.png" class="w-100">
+</div>
+<div class="col-lg-4 mt-5 text-center">
+    <img src="../Image/Path.png" style="
+    position: absolute;
+    left: -9px;
+">
+    <img src="../Image/Bitmap (6).png" style="
+    position: relative;
+    top: -116px;
+" class="GrilRes">
+</div>
+</div>
+
+<h5 style="color: #f28673;" class="pt-3">OUR TEAM</h5>
+    <h2 class="py-2 pb-5 text-white" style="font-size: 44px;"> Team of Designers<br>
+        and Developers
+    </h1>
+    <div class="row resources mb-5 animate fadeInUp one">
+        <div class="container" id="resource-slider">
+          <button class="arrow prev" style="visibility: visible;"></button>
+          <button class="arrow next" style="visibility: hidden;"></button>
+          <div class="resource-slider-frame">
+      
+            <div class="resource-slider-item" style="left: 0px;">
+              <div class="resource-slider-inset">
+                <div class="resource">
+                    <img src="../Image/Bitmap (7).png">
+                  
+                    <h5 class="mb-0 mt-2 text-white">Azah Anyeni</h5>
+                 
+                    <div class="text-muted">Designer </div>
+                </div>
+              </div>
+            </div>
+      
+            <div class="resource-slider-item" style="left: 277px;">
+              <div class="resource-slider-inset">
+                <div class="resource">
+                    <img src="../Image/Bitmap (8).png">
+                  
+                    <h5 class="mb-0 mt-2 text-white">Roelof Bekkenenks</h5>
+                 
+                    <div class="text-muted">React Developer  </div>
+                </div>
+              </div>
+            </div>
+      
+            <div class="resource-slider-item" style="left: 554px;">
+              <div class="resource-slider-inset">
+                <div class="resource">
+                    <div class="resource">
+                        <img src="../Image/Bitmap (9).png">
+                      
+                        <h5 class="mb-0 mt-2 text-white">Leonardo Oliveira</h5>
+                     
+                        <div class="text-muted"> Illustrator </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+      
+      
+            <div class="resource-slider-item" style="left: 831px;">
+              <div class="resource-slider-inset">
+                <div class="resource">
+                    <div class="resource">
+                        <img src="../Image/Bitmap (10).png">
+                      
+                        <h5 class="mb-0 mt-2 text-white">Izabella Tabakova</h5>
+                     
+                        <div class="text-muted"> Product Designer </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+      
+            <div class="resource-slider-item" style="left: 0px;">
+                <div class="resource-slider-inset">
+                  <div class="resource">
+                      <img src="../Image/Bitmap (7).png">
+                    
+                      <h5 class="mb-0 mt-2 text-white">Azah Anyeni</h5>
+                   
+                      <div class="text-white">Designer </div>
+                  </div>
+                </div>
+              </div>
+
+          </div>
+        </div>
+      </div>
+</div>
+</div>
+<!---Portfolio Section-->
+
+<!--Pricing Section-->
+<div class="float-left lightCream m-auto w-100 animate fadeInUp one" id="AgencyPricing">
+    <div class="container pt-5">
+       
+            <h5 style="color: #f28673;" class="pt-5">PRICING</h5>
+            <h1 style="font-size: 44px; color: #391400; font-weight: bolder;">Check Our<br>
+                Pricing Plans
+            </h1>
+           
+        <div class="my-5 mx-0 row">
+          <div class="col-sm-4 rounded pb-5" style="    border: 1px solid #e9cbc3;">
+            <h5 style="color: #f28673;" class="pt-5">CONSULTATION</h5>
+            <h5 class="pt-3" style="color: #391400;font-size: 44px;">Free</h5>
+            <div class="Info pb-4 pt-1">
+                Your digital marketing efforts,<br>instead of handling in-house.
+            </div>
+            <div class="pb-4 pt-1">
+                <i class="fa fa-plus-circle pr-1" style="color: #f28673;"></i>
+                Brand Design
+            </div>
+            <div class="Info pb-4 pt-1">
+                <i class="fa fa-minus-circle pr-1"></i>
+                Market Analysis 
+            </div>
+            <div class="Info pb-4 pt-1">
+                <i class="fa fa-minus-circle pr-1"></i>
+                Production
+
+            </div>
+            <a  class="Contact ml-auto px-3 mb-2 bg-white" style="color: #391400;"><span>CONTACT US</span></a>
+          </div>
+         <div class="col-sm-4 rounded pb-5 bg-white" style="border: 1px solid #e9cbc3;margin-top: -49px;">
+            <div class="float-left mb-4 w-100"><span style="background-color: #f28673;/* color: white; */padding: 5px 11px;" class="float-left mt-4 rounded-pill text-white">Popular</span></div>
+          <h5 style="color: #f28673;" class="pt-5">DESIGN</h5>
+            <h5 class="pt-3" style="color: #391400;font-size: 44px;">$1500</h5>
+            <div class="Info pb-4 pt-1">
+               Provide your business with a variety<br>of digital solutions to promote.
+            </div>
+            <div class="pb-4 pt-1">
+                <i class="fa fa-plus-circle pr-1" style="color: #f28673;"></i>
+                Brand Design
+            </div>
+            <div class="pb-4 pt-1">
+                <i class="fa fa-plus-circle pr-1" style="color: #f28673;"></i>
+                Market Analysis 
+            </div>
+            <div class="Info pb-4 pt-1">
+                <i class="fa fa-minus-circle pr-1"></i>
+                Production
+
+            </div>
+            <button class="Contact ButtonEffect px-3 mb-2" style="
+    background: linear-gradient(to bottom, #b75840, #ef6d58);
+"><span>CONTACT US</span></button>
+            
+          </div>
+         <div class="col-sm-4 rounded pb-5" style="    border: 1px solid #e9cbc3;">
+            <h5 style="color: #f28673;" class="pt-5">DESIGN + CODE</h5>
+            <h5 class="pt-3" style="color: #391400;font-size: 44px;">$2900</h5>
+            <div class="Info pb-4 pt-1">
+               Help you hit your marketing goals and<br>grow your business.
+            </div>
+            <div class="pb-4 pt-1">
+                <i class="fa fa-plus-circle pr-1" style="color: #f28673;"></i>
+                Brand Design
+            </div>
+            <div class="pb-4 pt-1">
+                  <i class="fa fa-plus-circle pr-1" style="color: #f28673;"></i>
+                Market Analysis 
+            </div>
+            <div class="pb-4 pt-1">
+                  <i class="fa fa-plus-circle pr-1" style="color: #f28673;"></i>
+                Production
+
+            </div>
+            <a  class="Contact ml-auto px-3 mb-2 bg-white" style="color: #391400;"><span>CONTACT US</span></a>
+          </div>
+        </div>
+      </div>
+      <!---FAQ Section-->
+<div class=" float-left w-100">
+<div class="row mx-0 py-5 container m-auto"> 
+        
+        <div class="col-lg-6 animate fadeInLeft three">
+            <h5 style="color: #f28673;">FAQ</h5>
+            <h1 style="font-size: 44px; color: #391400; font-weight:bolder;" class="pt-2">Frequently Asked <br>
+                Questions
+            </h1>
+           
+            <div class="Info pb-4 pt-4">
+                A digital agency is a business you hire to outsource your <br>
+                digital marketing efforts, instrad of handling in-house.
+            </div>
+            <a  class="Contact ml-auto px-3 mb-5" style="color: #391400;"><span>Contact Us</span></a>
+        </div>
+        <div class="col-lg-6 animate fadeInRight four">
+           <div id="accordion" role="tablist">
+  <div class="card">
+    <div class="bg-transparent border-0 card-header py-4" role="tab" id="headingOne">
+      <h5 class="mb-0">
+        <a class="float-left w-100 " data-toggle="collapse" href="#collapseOne" aria-expanded="true" style="    font-size: 25px;
+    color: #391400;
+    font-weight: bolder;">
+           <div style="width: 85%;float: left;">A digital agency is a business</div>
+        </a>
+      </h5>
+</div>
+<div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+      <div class="card-body Info">
+        A digital marketing efforts, instead of handling in-house. They can provide your business with a variety of digital solutions to promote your product or service online and help you hit your marketing goals and glow your business.
+      </div>
+</div>
+</div>
+<div class="card">
+    <div class="bg-transparent border-0 card-header py-4" role="tab" id="headingTwo">
+      <h5 class="mb-0">
+        <a class="collapsed float-left w-100" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="    font-size: 25px;
+    color: #391400;
+    font-weight: bolder;">
+          <div style="width: 85%;float: left;">Hire to outsource your digital</div>
+        </a>
+      </h5>
+</div>
+<div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+      <div class="card-body Info">
+        A digital marketing efforts, instead of handling in-house. They can provide your business with a variety of digital solutions to promote your product or service online and help you hit your marketing goals and glow your business
+      </div>
+</div>
+</div>
+<div class="card">
+    <div class="bg-transparent border-0 card-header py-4" role="tab" id="headingThree">
+      <h5 class="mb-0">
+        <a class="collapsed float-left w-100" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="    font-size: 25px;
+    color: #391400;
+    font-weight: bolder;">
+          <div style="width: 85%;float: left;">Marketing efforts</div>
+        </a>
+      </h5>
+</div>
+<div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
+      <div class="card-body Info">
+      A digital marketing efforts, instead of handling in-house. They can provide your business with a variety of digital solutions to promote your product or service online and help you hit your marketing goals and glow your business.
+      </div>
+</div>
+</div>
+<div class="card">
+    <div class="bg-transparent border-0 card-header py-4" role="tab" id="headingFour">
+      <h5 class="mb-0">
+        <a class="collapsed float-left w-100" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour" style="    font-size: 25px;
+    color: #391400;
+    font-weight: bolder;">
+        <div style="width: 85%;float: left;">Can provide your business</div>
+
+        </a>
+      </h5>
+</div>
+<div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingFour" data-parent="#accordion">
+      <div class="card-body Info" >
+      A digital marketing efforts, instead of handling in-house. They can provide your business with a variety of digital solutions to promote your product or service online and help you hit your marketing goals and glow your business.
+      </div>
+</div>
+</div>
+</div>
+        </div>
+       
+
+    </div>
+    </div>
+<!---FAQ Section-->
+<!---Location Section-->
+<div class="float-left w-100 animate fadeInUp one DesktopView">
+  <img src="../Image/map.png" class="float-left w-100" style="
+    position: absolute;height: 505px;
+">
+  <div class="row mx-0 py-5 container m-auto" style="position: relative;">
+  <div class="col-lg-6">
+    <div class="bg-white col-lg-10 mt-4 px-5 py-4 rounded float-left">
+            
+         
+            <h4 class="pt-3" style="color: #391400;">Get In Touch</h4>
+          
+            <div class="pb-3 pt-4">
+                <input type="text" placeholder="Your email" class="form-control">
+            </div>
+            <div class="pb-3 pt-1">
+               
+               <div class="dropdown w-100">
+  <button class="dropbtn">Subject  <i class="fa fa-caret-down float-right mr-3 mt-1"></i></button>
+  <div class="dropdown-content">
+  <a href="#">Subject 1</a>
+  <a href="#">Subject 2</a>
+  <a href="#">Subject 3</a>
+  </div>
+</div>
+            </div>
+            <div class="Info pb-4 pt-1">
+               <textarea type="text" placeholder="Message" class="form-control"></textarea>
+
+
+            </div>
+            <div class="w-100 float-left mb-2">
+            <button class="Contact ButtonEffect px-3  float-right" style="
+    background: linear-gradient(to bottom, #b75840, #ef6d58);
+"><span>SUBMIT NOW</span></button>
+</div>
+            
+          </div>
+  </div>
+  <div class="align-content-center col-lg-6 text-center">
+    <img src="../Image/pin.png" class="Map" style="
+    height: 63px;
+">
+  </div>
+  </div>
+</div>
+<div class="float-left w-100 animate fadeInUp one MobileView">
+ 
+  <div class="row mx-0 py-5 container m-auto">
+  <div class="col-lg-6">
+    <div class="bg-white col-lg-10 px-5 py-4 rounded float-left">
+            
+         
+            <h4 class="pt-3" style="color: #391400;">Get In Touch</h4>
+          
+            <div class="pb-3 pt-4">
+                <input type="text" placeholder="Your email" class="form-control">
+            </div>
+            <div class="pb-3 pt-1">
+               
+               <div class="dropdown w-100">
+  <button class="dropbtn">Subject  <i class="fa fa-caret-down float-right mr-3 mt-1"></i></button>
+  <div class="dropdown-content">
+  <a href="#">Subject 1</a>
+  <a href="#">Subject 2</a>
+  <a href="#">Subject 3</a>
+  </div>
+</div>
+            </div>
+            <div class="Info pb-4 pt-1">
+               <textarea type="text" placeholder="Message" class="form-control"></textarea>
+
+
+            </div>
+            <div class="w-100 float-left mb-2">
+            <button class="Contact ButtonEffect px-3  float-right" style="
+    background: linear-gradient(to bottom, #b75840, #ef6d58);
+"><span>SUBMIT NOW</span></button>
+</div>
+            
+          </div>
+  </div>
+ 
+  </div>
+   <img src="../Image/map.png" class="float-left w-100" style="height: 505px;position: relative
+">
+ <div class="align-content-center col-lg-6 text-center" style="position: absolute;
+    height: 50%;">
+    <img src="../Image/pin.png" class="Map" style="
+    height: 63px;
+">
+  </div>
+</div>
+<!---Location Section-->
+
+<!---Footer Section-->
+<div class="float-left w-100 py-5 text-center">
+  <div class="row mx-0 container m-auto">
+    <div class="col-lg-3">
+      <h2 style="color: #391400;"> Agency
+    </h2>
+    </div>
+    <div class="col-lg-3 mt-4">
+<h5 style="color: #f28673;">MENU</h5>
+<nav class="nav-menu pt-2">
+  <li><a class="pl-0 text-dark">About</a></li>
+  <li><a class="pl-0 text-dark">Services</a></li>
+  <li><a class="pl-0 text-dark">Blog</a> </li>
+  <li><a class="pl-0 text-dark">Contact</a></li>
+</ul>
+</nav>
+    </div>
+    <div class="col-lg-3 mt-4">
+<h5 style="color: #f28673;">FAQ</h5>
+<nav class="nav-menu pt-2">
+  <li><a class="pl-0 text-dark">Service</a></li>
+  <li><a class="pl-0 text-dark">Design</a></li>
+  <li><a class="pl-0 text-dark">Development</a> </li>
+  <li><a class="pl-0 text-dark">Marketing</a></li>
+</ul>
+</nav>
+    </div>
+      <div class="align-content-center col-lg-3">
+      <img src="../Image/social.png" class="mt-4">
+    </div>
+    <hr class="float-left mt-5 w-100">
+    <div class="w-100 row mx-0">
+    <p class="text-center CopyRIghtRow"><div class="CopyRIghtRow">Copyright © 2022 Laaqiq.</div><div class="CopyRIghtRow">  All Rights Reserved</div></p>
+     <p class="ml-auto CopyRIghtRow pdtp"><span class="pr-5">Terms of Use</span><span>Privacy Policy</span></p>
+    </div>
+  </div>
+</div>
+<!---Footer Section-->
+        </div>
+<!--Pricing Section-->
+
+<script id="rendered-js">
+    function defer(method) {
+      if (window.jQuery)
+      method();else
+    
+      setTimeout(function () {
+        defer(method);
+      }, 50);
+    }
+    defer(function () {
+      (function ($) {
+    
+        function doneResizing() {
+          var totalScroll = $('.resource-slider-frame').scrollLeft();
+          var itemWidth = $('.resource-slider-item').width();
+          var difference = totalScroll % itemWidth;
+          if (difference !== 0) {
+            $('.resource-slider-frame').animate({
+              scrollLeft: '-=' + difference },
+            500, function () {
+              // check arrows
+              checkArrows();
+            });
+          }
+        }
+    
+        function checkArrows() {
+          var totalWidth = $('#resource-slider .resource-slider-item').length * $('.resource-slider-item').width();
+          var frameWidth = $('.resource-slider-frame').width();
+          var itemWidth = $('.resource-slider-item').width();
+          var totalScroll = $('.resource-slider-frame').scrollLeft();
+    
+          if (totalWidth - frameWidth - totalScroll < itemWidth) {
+            $(".next").css("visibility", "hidden");
+          } else
+          {
+            $(".next").css("visibility", "visible");
+          }
+          if (totalScroll < itemWidth) {
+            $(".prev").css("visibility", "hidden");
+          } else
+          {
+            $(".prev").css("visibility", "visible");
+          }
+        }
+    
+        $('.arrow').on('click', function () {
+          var $this = $(this),
+          width = $('.resource-slider-item').width(),
+          speed = 500;
+          if ($this.hasClass('prev')) {
+            $('.resource-slider-frame').animate({
+              scrollLeft: '-=' + width },
+            speed, function () {
+              // check arrows
+              checkArrows();
+            });
+          } else if ($this.hasClass('next')) {
+            $('.resource-slider-frame').animate({
+              scrollLeft: '+=' + width },
+            speed, function () {
+              // check arrows
+              checkArrows();
+            });
+          }
+        }); // end on arrow click
+    
+        $(window).on("load resize", function () {
+          checkArrows();
+          $('#resource-slider .resource-slider-item').each(function (i) {
+            var $this = $(this),
+            left = $this.width() * i;
+            $this.css({
+              left: left });
+    
+          }); // end each
+        }); // end window resize/load
+    
+        var resizeId;
+        $(window).resize(function () {
+          clearTimeout(resizeId);
+          resizeId = setTimeout(doneResizing, 500);
+        });
+    
+      })(jQuery); // end function
+    });
+    //# sourceURL=pen.js
+        </script>
+</body>
+</html>
